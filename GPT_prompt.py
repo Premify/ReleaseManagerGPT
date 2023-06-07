@@ -3,6 +3,11 @@ import streamlit as st
 from collections import defaultdict
 from streamlit.components.v1 import html
 
+st.set_page_config(
+    page_title="RN - GPT Prompt",
+    page_icon="🤖"
+)
+
 def open_page(url):
     # Generate a unique timestamp to append to the URL
     timestamp = pd.Timestamp.now().strftime('%Y%m%d%H%M%S')
