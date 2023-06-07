@@ -34,7 +34,9 @@ def process_release_notes(csv_file):
 
     # Populate the dictionary with the notes
     for _, row in df.iterrows():
-        notes[mapping[row['Benutzerdefinierte Felder (Release Notes Category)']]].append(
+        # Use 'MISSING CATEGORY' as a fallback when a category is not present
+        category = mapping.get(row['Benutzerdefinierte Felder (Release Notes Category)'], 'MISSING CATEGORY')
+        notes[category].append(
             row['Benutzerdefinierte Felder (Release Notes)'])
 
     # Generate the release notes
