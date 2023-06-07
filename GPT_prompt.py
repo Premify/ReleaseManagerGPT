@@ -41,7 +41,8 @@ def process_release_notes(csv_file):
 
     # Generate the release notes
     release_notes = "Now I will give you some raw unedited release notes.\n\nIn your revised drafts of the release notes, please avoid using first-person plural phrases such as 'we've fixed', 'we've added', 'we've improved', etc. The revised notes should maintain a neutral tone and focus on the changes themselves, not who implemented them. Describe the changes as facts or actions that have occurred, rather than actions performed by the development team. Also keep the [Module...] part at the beginning of the sentence if available.\n\n"
-    release_notes += "Table structure (Make sure to set a heading for each used category heading - the heading should be highlighted in bold.):\n"
+    release_notes += "Please organize the release notes in a table format. Each table should be under the heading of the release note category (e.g. Bug Fixes, New Features, Improvements, etc.). Remember to highlight the category heading in bold! If the category is missing, use 'MISSING CATEGORY' as heading title. Do not try to guess the missing category by analyzing the release notes.\n\n"
+    release_notes += "Table structure:\n"
     release_notes += "1. Column: Release note => Just copy the given release note text here\n"
     release_notes += "2. Column: Rating => Rate the release note by 0 - 10, according to what you've learned about the writing style and the given examples before\n"
     release_notes += "3. Column: Suggestions => List everything that you would change about it\n"
