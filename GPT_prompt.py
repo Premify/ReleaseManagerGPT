@@ -71,7 +71,7 @@ def main():
         release_notes = process_release_notes(csv_file)
 
         # Display the release notes in a text area
-        st.text_area("Copy the text and click on the Button below", value=release_notes, height=400)
+        st.text_area("Copy the text and click on the button below", value=release_notes, height=400)
 
         # Button for ChatGPT link
         st.button('Open GPT', on_click=open_page, args=('https://chat.openai.com/share/eda2e5e1-7b44-41d6-b4f1-96bf28c34aaf',))
